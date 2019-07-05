@@ -1,0 +1,22 @@
+<template>
+  <div id="header">
+    <p class="logo">
+      <router-link to="/"><img src="@/assets/images/logo_b.png" alt="상쾌환" width="126"></router-link>
+    </p>
+
+    <p class="title">보자</p>
+    <ul class="nav">
+      <li class="on"><p><a href='#'>광고 영상</a></p></li>
+      <li><p><a href='#'>바이럴 영상</a></p></li>
+      <li><p><a href='#'>보도 자료</a></p></li>
+    </ul>
+
+    <p class="control"><img src="@/assets/images/btn_arrow.gif" alt=""></p>
+  </div><!-- //header -->
+</template>
+
+<script>
+export default {
+  name: 'Snb'
+}
+</script>

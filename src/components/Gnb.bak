@@ -1,0 +1,49 @@
+<template>
+  <div id="gnb">
+    <div class="user">
+      <span class="id">super님께서 로그인중입니다.</span>
+      <input type="button" value="로그아웃">
+    </div>
+    <ul class="nav">
+      <li v-for="menu in menus" :class="{on:isActive(menu.to)}"><router-link v-bind:to="menu.to">{{menu.name}}</router-link></li>
+    </ul>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'
+
+export default {
+  name: 'Gnb',
+  data() {
+    return {
+      currentPath: '',
+      menus : []
+    }
+  },
+  mounted() {
+    axios.get("/menu1.json").then((result) => {
+      this.menus = result.data;
+    });
+  },
+  watch: {
+    $route (to, from) {
+      this.currentPath = to.path;
+      this.EventBus.$emit("gnb-update", this.findName(to.path));
+    }
+  },
+  methods : {
+    isActive(path) {
+      return path === this.currentPath;
+    },
+    findName(path) {
+      for (let menu of this.menus) {
+        console.log(menu.to + ", " + path);
+        if (menu.to === path) {
+          return menu.name;
+        }
+      }
+    }
+  }
+}
+</script>
