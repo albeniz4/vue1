@@ -1,17 +1,16 @@
 <template>
   <div id="container">
-    <div id="location">
-      <h1>공지사항</h1>
-      <ul>
-        <li>기본 관리</li>
-        <li class="on">공지사항</li>
-      </ul>
-    </div>
+    <location :large-idx="4" :small-idx="1"/>
     <div>기본 관리 내용</div>
   </div>
 </template>
 <script>
+  import Location from "@/components/Location.vue";
+
   export default {
-    name: 'List'
+    name: 'List',
+    components: {
+      Location
+    }
   }
 </script>

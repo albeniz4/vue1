@@ -1,125 +1,125 @@
 [
   {
     "idx": 1,
-    "to": "cf",
+    "to": "/cf",
     "name": "보자",
     "sub": [
       {
         "idx": 1,
-        "to": "cf",
+        "to": "/cf",
         "name": "광고영상"
       },
       {
         "idx": 2,
-        "to": "",
+        "to": "/",
         "name": "바이럴영상"
       },
       {
         "idx": 3,
-        "to": "",
+        "to": "/",
         "name": "보도 자료"
       }
     ]
   },
   {
     "idx": 2,
-    "to": "sns",
+    "to": "/sns",
     "name": "나누자",
     "sub": [
       {
         "idx": 1,
-        "to": "sns",
+        "to": "/sns",
         "name": "따끈따끈 SNS"
       },
       {
         "idx": 2,
-        "to": "",
+        "to": "/",
         "name": "상쾌피디아"
       },
       {
         "idx": 3,
-        "to": "",
+        "to": "/",
         "name": "캠페인&프로모션"
       }
     ]
   },
   {
     "idx": 3,
-    "to": "event",
+    "to": "/event",
     "name": "이벤트/판매처",
     "sub": [
       {
         "idx": 1,
-        "to": "event",
+        "to": "/event",
         "name": "이벤트 관리"
       },
       {
         "idx": 2,
-        "to": "",
+        "to": "/",
         "name": "메인 제품관리"
       },
       {
         "idx": 3,
-        "to": "",
+        "to": "/",
         "name": "카카오톡 선물관리"
       }
     ]
   },
   {
     "idx": 4,
-    "to": "notice",
+    "to": "/notice",
     "name": "기본 관리",
     "sub": [
       {
         "idx": 1,
-        "to": "notice",
+        "to": "/notice",
         "name": "공지사항"
       },
       {
         "idx": 2,
-        "to": "",
+        "to": "/",
         "name": "FAQ"
       },
       {
         "idx": 3,
-        "to": "",
+        "to": "/",
         "name": "고객문의 관리"
       },
       {
         "idx": 4,
-        "to": "",
+        "to": "/",
         "name": "제휴문의 관리"
       },
       {
         "idx": 5,
-        "to": "",
+        "to": "/",
         "name": "개인정보 처리방침"
       },
       {
         "idx": 6,
-        "to": "",
+        "to": "/",
         "name": "팝업 관리"
       }
     ]
   },
   {
     "idx": 5,
-    "to": "admin",
+    "to": "/admin",
     "name": "권한 관리",
     "sub": [
       {
         "idx": 1,
-        "to": "admin",
+        "to": "/admin",
         "name": "Admin 관리"
       },
       {
         "idx": 2,
-        "to": "",
+        "to": "/",
         "name": "기초코드 관리"
       },
       {
         "idx": 3,
-        "to": "",
+        "to": "/",
         "name": "텍스트 관리"
       }
     ]

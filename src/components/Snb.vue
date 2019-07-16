@@ -33,23 +33,12 @@ export default {
       menus: []
     };
   },
-  mounted() {
-      axios.get("/menu.json").then(result => {
-        for (let row of result.data) {
-        console.log(this.$route);
-          if (row.idx === this.$route.params.idx) {
-            if (row.sub !== null) {
-              this.menus = row.sub;
-            }
-          }
-        }
-      });
-  },
   watch: {
     $route(to, from) {
       axios.get("/menu.json").then(result => {
+        let idx = this.findIdx(result.data);
         for (let row of result.data) {
-          if (row.idx === to.params.idx) {
+          if (row.idx === idx) {
             if (row.sub !== null) {
               this.menus = row.sub;
             }
@@ -66,6 +55,13 @@ export default {
   methods: {
     isActive(idx) {
       return idx === 1;
+    },
+    findIdx(data) {
+      for (let row of data) {
+        if (row.to === this.$route.path) {
+          return row.idx;
+        }
+      }
     }
   },
   created() {
