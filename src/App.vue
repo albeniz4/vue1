@@ -4,6 +4,7 @@
       <snb/>
       <gnb/>
       <router-view/>
+      <foot/>
     </div><!-- //wrapper -->
   </div>
 </template>
@@ -11,6 +12,7 @@
   // @ is an alias to /src
   import Snb from '@/components/Snb.vue'
   import Gnb from '@/components/Gnb.vue'
+  import Foot from '@/components/Foot.vue'
 
   export default {
     name: 'app',
@@ -21,7 +23,8 @@
     },
     components: {
       Snb,
-      Gnb
+      Gnb,
+      Foot
     },
     mounted() {
       this.isMain = this.$router.currentRoute.path === "/";

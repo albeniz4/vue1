@@ -1,12 +1,9 @@
 <template>
   <div id="gnb">
-    <div class="user">
-      <span class="id">super님께서 로그인중입니다.</span>
-      <input type="button" value="로그아웃">
-    </div>
+    <gnb-user/>
     <ul class="nav">
-      <li v-for="menu in menus" :class="{on:isActive(menu.to)}">
-        <router-link v-bind:to="menu.to">{{menu.name}}</router-link>
+      <li v-for="(menu, idx) in menus" :class="{on:isActive(menu.to)}" :key="idx">
+        <router-link v-bind:to="{name:menu.to, params:{idx:menu.idx}}">{{menu.name}}</router-link>
       </li>
     </ul>
   </div>
@@ -14,6 +11,7 @@
 
 <script>
   import axios from 'axios'
+  import GnbUser from '@/components/GnbUser.vue'
 
   export default {
     name: 'Gnb',
@@ -24,7 +22,7 @@
       }
     },
     mounted() {
-      axios.get("/menu1.json").then((result) => {
+      axios.get("/menu.json").then((result) => {
         this.menus = result.data;
       });
     },
@@ -41,12 +39,14 @@
 
       findName(path) {
         for (let menu of this.menus) {
-          console.log(menu.to + ", " + path);
           if (menu.to === path) {
             return menu.name;
           }
         }
       }
+    },
+    components: {
+      GnbUser
     }
   }
 </script>

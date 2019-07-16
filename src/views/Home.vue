@@ -7,10 +7,6 @@
   import Gnb from '@/components/Gnb.vue'
 
   export default {
-    name: 'home',
-    components: {
-      Snb,
-      Gnb
-    }
+    name: 'home'
   }
 </script>
